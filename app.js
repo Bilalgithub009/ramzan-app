@@ -76,47 +76,38 @@ btnReset.addEventListener("click", () => {
     counterEl.innerText = count;
 })
 
+const calendar = document.getElementById("calendar");
 
-const calendarEl = document.getElementById("calendar");
+// Ramadan start date
+const ramzanStart = new Date(2026, 1, 18); // Feb 18, 2026
+const totalDays = 30;
+const endDate = new Date(ramzanStart); endDate.setDate(ramzanStart.getDate() + totalDays - 1);
 
-// Ramzan example: Feb 18 2026 start
-const ramzanStart = new Date(2026, 1, 18); // month 1 = Feb
-const ramzanDays = 30;
-const todaydate = new Date();
+// Urdu days
+const urduDays = ["اتوار", "پیر", "منگل", "بدھ", "جمعرات", "جمعہ", "ہفتہ"];
+const monthNames = ["فروری"];
 
-// For each day of Ramzan
-for (let i = 0; i < ramzanDays; i++) {
-    const dayDate = new Date(ramzanStart);
-    dayDate.setDate(ramzanStart.getDate() + i);
 
-    const dayEl = document.createElement("div");
-    dayEl.classList.add("p-3", "rounded-md", "border", "border-gray-200");
 
-    // Month short name
-    const monthNames = ["جنوری", "فروری", "مارچ", "اپریل", "مئی", "جون", "جولائی", "اگست", "ستمبر", "اکتوبر", "نومبر", "دسمبر"];
-    const rozaNumber = i + 1; // Roz number (1-30)
-    
 
-    const monthShort = monthNames[dayDate.getMonth()];
-
-    // Add inner HTML: Day number + small month below
-    dayEl.innerHTML = `<div class="font-bold">${dayDate.getDate()}</div><div class="text-xs text-gray-500 ">${monthShort} ${rozaNumber}</div>`;
-
-    // Past days (Sehri/Iftar done) highlight
-    if (dayDate < todaydate) {
-        dayEl.classList.add("bg-green-300", "text-white");
-    }
-
-    // todayDate highlight
-    if (
-        dayDate.getDate() === todaydate.getDate() &&
-        dayDate.getMonth() === todaydate.getMonth() &&
-        dayDate.getFullYear() === todaydate.getFullYear()
-    ) {
-        dayEl.classList.add("bg-yellow-400", "shadow-lg", "font-bold");
-    }
-
-    calendarEl.appendChild(dayEl);
+// Pehle blank cards for empty spaces
+for (let i = 0; i < ramzanStart.getDay(); i++) {
+    const empty = document.createElement("div");
+    calendar.appendChild(empty);
 }
 
+// Generate Ramadan days
+for (let day = 1; day <= totalDays; day++) {
+    const currentDate = new Date(2026, 1, 18 + (day - 1));
+    const weekday = currentDate.getDay();
 
+    const card = document.createElement("div");
+    card.className = "p-2 bg-yellow-100 rounded-lg shadow hover:bg-yellow-300 transition";
+
+    card.innerHTML = `
+    <div class="text-sm text-center gap-12 font-semibold text-green-900">${urduDays[weekday]}</div>
+    <div class="text-lg font-bold text-center text-green-900 mt-2">${day}</div>
+  `;
+
+    calendar.appendChild(card);
+}
