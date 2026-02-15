@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+    </head>
+    <body>
+        
+        <header class="header">
+            <h1 class="text-2xl font-bold"> 🕌🌙 رمضان کریم</h1>
+            <p id="ramzan-timer">Loading...</p>
+            <p class="mt-3 font-bold text-xl">رحمت، مغفرت اور نجات کا مہینہ</p>
+        </header>
+
+<!-- calender  -->
+   <section class="mt-10 p-6 bg-white rounded-xl shadow-md">
+  <h2 class="text-2xl font-bold text-center mb-6 text-yellow-800">📅 رمضان کا کیلنڈر</h2>
+
+  <div class="grid grid-cols-7 gap-3 text-center text-gray-700 font-semibold hover:text-yellow-600">
+
+    <div class=" text-green-800">اتوار</div>
+    <div class=" text-green-800">پیر</div>
+    <div class=" text-green-800">منگل</div>
+    <div class=" text-green-800">بدھ</div>
+    <div class=" text-green-800">جمعرات</div>
+    <div class=" text-green-800">جمعہ</div>
+    <div class=" text-green-800">ہفتہ</div>
+  </div>
+
+  <div id="calendar" class="grid grid-cols-7 gap-3 text-center mt-3 text-green-800"></div>
+  <div></div>
+</section>
+
+
+
+<div class="flex flex-col md:flex-row justify-between items-center  gap-6 mt-10 ms-8  me-8">
+<div class="card">
+<div class="header">
+              <h2 class="price"> پہلا عشرہ رحمت  </h2>
+					</div>
+            <p class="desc">
+        رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ
+      </p>
+					<ul class="lists">
+						<li class="list">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>اللہ کی خاص رحمت نازل ہوتی ہے</span>
+						</li>
+						<li class="list">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>نیکیوں کا اجر کئی گنا بڑھ جاتا ہے</span>
+						</li>
+						<li class="list">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>اللہ سے قربت حاصل کرنے کا بہترین وقت</span>
+						</li>
+					</ul>
+				</div>
+      <!-- 2 -->
+
+        <div class="card">
+          <div class="header">
+						
+            <h1 class="price">دوسرا عشرہ مغفرت</h1>
+					</div>
+
+           <h2>دوسرا عشرہ</h2>
+      <p class="desc">
+        اَسْتَغْفِرُاللّٰهَ رَبِّيْ مِنْ كُلِّ ذَنْبٍ وَّاَتُوْبُ اِلَيْهِ
+      </p>
+					<ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>توبہ اور استغفار کی کثرت کا وقت</span>
+						</li>
+						<li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>گناہوں کی معافی مانگنے کا عشرہ</span>
+						</li>
+						<li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>اللہ کی بخشش کے دروازے کھلے ہوتے ہیں</span>
+						</li>
+					</ul>
+				</div>
+        
+        <!-- 3 -->
+        
+        <div class="card">
+          <div class="header">
+              <h1 class="price">تیسرا عشرہ نجات</h1>
+					</div>
+           <p class="dua">
+        اَللّٰهُمَّ اَجِرْنِيْ مِنَ النَّار
+      </p>
+					<ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>شبِ قدر کی تلاش کا وقت</span>
+						</li>
+						<li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>اللہ کی رضا اور آخرت کی کامیابی</span>
+						</li>
+						<li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>جہنم کی آگ سے نجات مانگنے کا عشرہ</span>
+						</li>
+					</ul>
+				</div>
+        
+      </div>
+        
+
+        <!-- carousal here -->
+      
+ <section class="dua-section">
+  <h2 class="m-4 font-bold text-2xl">🤲 رمضان کی دعائیں</h2>
+
+  <div class="carousel">
+    <button class="nav" onclick="prevSlide()">❮</button>
+
+    <div class="slide">
+      <h3 id="dua-title"></h3>
+      <p id="dua-text"></p>
+    </div>
+
+    <button class="nav" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+
+
+<!-- cards here -->
+
+
+<h1 class="text-center text-2xl font-bold mt-4">رمضان کے روزے میں کیا کیا چیزیں جائز ہیں اور کیا نہیں </h1>
+<div class="mt-10 flex flex-col md:flex-row gap-10">
+
+  <!-- CARD 1 : Roza toot jata hai -->
+  <div class="md:w-1/2 bg-red-50 border border-red-200 rounded-xl p-6 shadow-md">
+    <h1 class="font-bold text-xl mb-4 text-red-700 flex items-center gap-2">
+      🍽️ روزہ میں وہ کام جن سے روزہ ٹوٹ جاتا ہے
+    </h1>
+
+    <ol class="list-decimal list-inside space-y-2 text-gray-800 font-medium ">
+      <li>جان بوجھ کر کھانا یا پینا</li>
+      <li>جنسی تعلق</li>
+      <li>جان بوجھ کر قے کرنا</li>
+      <li>سگریٹ پینا</li>
+      <li>دوائی لینا</li>
+    </ol>
+  </div>
+
+  <!-- CARD 2 : Roza nahi toot-ta -->
+  <div class="md:w-1/2 bg-green-50 border border-green-200 rounded-xl p-6 shadow-md">
+    <h1 class="font-bold text-xl mb-4 text-green-700 flex items-center gap-2">
+      ✅ روزہ میں وہ کام جن سے روزہ نہیں ٹوٹتا
+    </h1>
+
+    <ol class="list-decimal list-inside space-y-2 text-gray-800 font-medium ">
+      <li>بھول کر کھانا یا پینا</li>
+      <li>قے کرنا (اگر بیماری کی وجہ سے ہو)</li>
+      <li>خون بہنا (اگر زخم کی وجہ سے ہو)</li>
+      <li>خوشبو لگانا</li>
+      <li>آنکھ میں قطرے ڈالنا</li>
+    </ol>
+  </div>
+
+</div>
+
+
+<!-- zikro azkaer section here -->
+
+<section class="mt-16 bg-yellow-50 p-8 rounded-xl shadow-md">
+  <h2 class="text-2xl font-bold mb-6 text-center text-yellow-800">🕋 ذکر و اذکار</h2>
+
+  <div class="flex flex-col md:flex-row gap-8">
+
+    <!-- LEFT: Zikro list -->
+    <div class="md:w-1/2 space-y-4">
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">صبح کا ذکر</h3>
+        <p>اَللّٰهُمَّ أَنْتَ رَبِّى لاَ إِلٰهَ إِلاَّ أَنْتَ</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">شام کا ذکر</h3>
+        <p>سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">رمضان خاص ذکر</h3>
+        <p>اللّٰهُمَّ اجعل صيامنا صيام الصالحين وقيامنا قيام الصالحين</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: Tasbeeh Counter -->
+    <div class="md:w-1/2 bg-white p-6 rounded-xl shadow flex flex-col items-center justify-center">
+      <h3 class="font-bold text-lg mb-4 text-center">تسبیح شمار</h3>
+      <p id="counter" class="text-4xl font-bold text-yellow-800 mb-4">0</p>
+      <button id="btnCounter" class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition">
+        ذکر کا اضافہ کریں
+      </button>
+      <button id="btnReset" class="bg-gray-300 text-gray-700 px-4 py-1 mt-3 rounded-lg hover:bg-gray-400 transition">
+        دوبارہ شمار کریں
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- namza wazaif section here -->
+
+
+
+<section class="mt-16 bg-green-50 p-8 rounded-xl shadow-md">
+  <h2 class="text-2xl font-bold mb-6 text-center text-green-800">🕌 نماز کے بعد کے وظائف</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Fajr -->
+    <div class="bg-green-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-3 text-green-700">فجر کی نماز کے بعد</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>سورۃ الفاتحہ 3 بار پڑھیں</li>
+        <li>سورۃ الاخلاص 3 بار پڑھیں</li>
+        <li>سبحان اللہ 33 بار، الحمد للہ 33 بار، اللہ اکبر 34 بار</li>
+      </ul>
+    </div>
+
+    <!-- Dhuhr -->
+    <div class="bg-green-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-3 text-green-700">ظہر کی نماز کے بعد</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>آیت الکرسی پڑھیں</li>
+        <li>سبحان اللہ 33 بار، الحمد للہ 33 بار، اللہ اکبر 34 بار</li>
+      </ul>
+    </div>
+
+    <!-- Asr -->
+    <div class="bg-green-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-3 text-green-700">عصر کی نماز کے بعد</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>سبحان اللہ 33 بار، الحمد للہ 33 بار، اللہ اکبر 34 بار</li>
+        <li>دعا برائے مغفرت پڑھیں</li>
+      </ul>
+    </div>
+
+    <!-- Maghrib -->
+    <div class="bg-green-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-3 text-green-700">مغرب کی نماز کے بعد</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>سورۃ الفاتحہ 3 بار</li>
+        <li>سورۃ الاخلاص، الفلق، الناس ہر ایک 3 بار</li>
+      </ul>
+    </div>
+
+    <!-- Isha -->
+    <div class="bg-green-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-3 text-green-700">عشاء کی نماز کے بعد</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>سبحان اللہ 33 بار، الحمد للہ 33 بار، اللہ اکبر 34 بار</li>
+        <li>دعا برائے برکت و صحت پڑھیں</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+          <p class="mt-1">$16.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+          <p class="mt-1">$21.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+          <p class="mt-1">$18.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+          <p class="mt-1">$16.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+          <p class="mt-1">$21.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+          <p class="mt-1">$18.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+        
+
+
+        
+        
+        
+        
+        <script src="app.js"></script>
+</body>
+</html>

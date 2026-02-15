@@ -1,0 +1,140 @@
+.header {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #0f5132, #198754);
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+#ramzan-timer {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.dua-section {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background: #f8f9fa;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide {
+  background: white;
+  padding: 60px 20px 20px 20px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.nav {
+  font-size: 24px;
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav:hover {
+  background: #0f5132;
+}
+
+
+/* From Uiverse.io by Yaya12085 */ 
+.card {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 1.5rem;
+  border-radius: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #fff
+}
+
+.price {
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff
+}
+
+.desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 2rem;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+  /* color: rgba(156, 163, 175, 1); */
+}
+
+.lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  margin-left: 0.5rem
+}
+
+.lists .list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: rgba(167, 139, 250, 1);
+}
+
+.action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background-color: rgba(167, 139, 250, 1);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(17, 24, 39, 1);
+}
