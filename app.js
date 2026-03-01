@@ -18,7 +18,7 @@ if (daysLeft > 0) {
 } else if (daysLeft === 0) {
     timer.innerText = "🌙 آج پہلا روزہ ہے — رمضان کریم";
 } else {
-    timer.innerText = "🌙 رمضان مبارک";
+    timer.innerText = "رمضان شروع ہو چکا ہے! رمضان مبارک";
 }
 
 const duas = [
@@ -55,7 +55,7 @@ function nextSlide() {
 }
 
 function prevSlide() {
-    index = (index - 1 + duas.length) % duas.length;
+    index = (index + 1 + duas.length) % duas.length;
     showSlide();
 }
 
@@ -76,21 +76,23 @@ btnReset.addEventListener("click", () => {
     counterEl.innerText = count;
 })
 
+
+
+
 const calendar = document.getElementById("calendar");
 
-// Ramadan start date
-const ramzanStart = new Date(2026, 1, 18); // Feb 18, 2026
+// Ramadan start date (19 February 2026 - Thursday)
+const ramzanStart = new Date(2026, 1, 19);
 const totalDays = 30;
-const endDate = new Date(ramzanStart); endDate.setDate(ramzanStart.getDate() + totalDays - 1);
 
 // Urdu days
 const urduDays = ["اتوار", "پیر", "منگل", "بدھ", "جمعرات", "جمعہ", "ہفتہ"];
-const monthNames = ["فروری"];
 
+// 👉 Aaj ki date (time remove karke)
+const today = new Date();
+today.setHours(0, 0, 0, 0);
 
-
-
-// Pehle blank cards for empty spaces
+// Pehle blank cards
 for (let i = 0; i < ramzanStart.getDay(); i++) {
     const empty = document.createElement("div");
     calendar.appendChild(empty);
@@ -98,16 +100,30 @@ for (let i = 0; i < ramzanStart.getDay(); i++) {
 
 // Generate Ramadan days
 for (let day = 1; day <= totalDays; day++) {
-    const currentDate = new Date(2026, 1, 18 + (day - 1));
+
+    const currentDate = new Date(ramzanStart);
+    currentDate.setDate(ramzanStart.getDate() + (day - 1));
+    currentDate.setHours(0, 0, 0, 0);
+
     const weekday = currentDate.getDay();
 
     const card = document.createElement("div");
-    card.className = "p-2 bg-yellow-100 rounded-lg shadow hover:bg-yellow-300 transition";
+
+    // ✅ Check agar yeh aaj ka roza hai
+    if (currentDate.getTime() === today.getTime()) {
+        card.className = "p-2 bg-yellow-400 text-white rounded-lg shadow transition";
+    } else {
+        card.className = "p-2 bg-yellow-100 rounded-lg font-bold shadow hover:bg-yellow-200 transition";
+    }
 
     card.innerHTML = `
-    <div class="text-sm text-center gap-12 font-semibold text-green-900">${urduDays[weekday]}</div>
-    <div class="text-lg font-bold text-center text-green-900 mt-2">${day}</div>
-  `;
+      <div class="text-sm text-center font-bold">
+        ${urduDays[weekday]}
+      </div>
+      <div class="text-lg font-bold text-center mt-2">
+        ${day}
+      </div>
+    `;
 
     calendar.appendChild(card);
 }
